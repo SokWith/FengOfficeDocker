@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:20.04
 MAINTAINER juangburgos@gmail.com
 
 # Update
@@ -24,7 +24,8 @@ EXPOSE 80
 # Download XAMPP
 RUN wget -O /opt/xampp-linux-x64-installer.run https://www.apachefriends.org/xampp-files/5.6.21/xampp-linux-x64-5.6.21-0-installer.run
 # Download Feng Office
-RUN wget -O /opt/fengoffice.zip https://sourceforge.net/projects/opengoo/files/fengoffice/fengoffice_3.4.2.2/fengoffice_3.4.2.2.zip
+#RUN wget -O /opt/fengoffice.zip https://sourceforge.net/projects/opengoo/files/fengoffice/fengoffice_3.4.2.2/fengoffice_3.4.2.2.zip
+ADD fengoffice_2.7.1.6.zip /opt/fengoffice.zip
 
 # Add custom bootstrap script
 ADD bootstrap.sh /opt/bootstrap.sh 
